@@ -1,6 +1,6 @@
 package org.wordpress.android.util;
 
-import com.crashlytics.android.Crashlytics;
+//import com.crashlytics.android.Crashlytics;
 
 public class CrashlyticsUtils {
     final private static String EXCEPTION_KEY = "exception";
@@ -11,13 +11,13 @@ public class CrashlyticsUtils {
 
     public static void logException(Throwable tr, ExceptionType exceptionType, AppLog.T tag, String message) {
         if (tag != null) {
-            Crashlytics.setString(TAG_KEY, tag.name());
+            //Crashlytics.setString(TAG_KEY, tag.name());
         }
         if (message != null) {
-            Crashlytics.setString(MESSAGE_KEY, message);
+            //Crashlytics.setString(MESSAGE_KEY, message);
         }
-        Crashlytics.setString(EXCEPTION_KEY, exceptionType.name());
-        Crashlytics.logException(tr);
+        //Crashlytics.setString(EXCEPTION_KEY, exceptionType.name());
+        //Crashlytics.logException(tr);
     }
 
     public static void logException(Throwable tr, ExceptionType exceptionType, AppLog.T tag) {
@@ -31,18 +31,18 @@ public class CrashlyticsUtils {
     // Utility functions to force us to use and reuse a limited set of keys
 
     public static void setInt(ExtraKey key, int value) {
-        Crashlytics.setInt(key.name(), value);
+        //Crashlytics.setInt(key.name(), value);
     }
 
     public static void setFloat(ExtraKey key, float value) {
-        Crashlytics.setFloat(key.name(), value);
+        //Crashlytics.setFloat(key.name(), value);
     }
 
     public static void setString(ExtraKey key, String value) {
-        Crashlytics.setString(key.name(), value);
+        //Crashlytics.setString(key.name(), value);
     }
 
     public static void setBool(ExtraKey key, boolean value) {
-        Crashlytics.setBool(key.name(), value);
+        //Crashlytics.setBool(key.name(), value);
     }
 }
