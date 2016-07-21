@@ -19,7 +19,7 @@ import it.polimi.testing.lifecycle.StopCallback;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.action.ViewActions.replaceText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -56,7 +56,7 @@ public class MyProfileActivityTest extends ActivityRuleLifecycleTest<MyProfileAc
                 name = "MyFirstName"+(new Random().nextInt(100));
                 onView(withId(R.id.my_profile_dialog_input))
                         .check(matches(isDisplayed()))
-                        .perform(typeText(name));
+                        .perform(replaceText(name));
 
                 // Confirm
                 onView(withText("OK"))
