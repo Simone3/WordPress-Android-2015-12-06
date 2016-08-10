@@ -124,7 +124,7 @@ dependencies {
     }
 
     // The lifecycle testing library
-    androidTestCompile ('it.polimi.testing:activity-rule-lifecycle-testing:0.13') {
+    androidTestCompile ('it.polimi.testing:activity-rule-lifecycle-testing:1.0') {
         exclude group: 'com.android.support'
         exclude group: 'com.android.support.test'
     }
